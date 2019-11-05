@@ -24,7 +24,7 @@ def getSum(array)
     return result
 end
 
-say_hello('Everyone’')
+say_hello('Everyone')
 puts add2(2)
 array = [1,2,3]
 puts getSum(array)
