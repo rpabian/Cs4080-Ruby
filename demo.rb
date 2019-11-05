@@ -31,6 +31,7 @@ end
 
 #with return
 def getSum(array)
+    #the 0 base case is needed so that 0 will be returned on an empty array instead of nil
     result = array.inject(0){|sum,x| sum + x }
     return result
 end
