@@ -1,21 +1,17 @@
 # frozen_string_literal: true
 
-require 'i18n'
-
-I18n.load_path += Dir[File.join( __dir__, 'dummy-data', '*.yml')]
-
 module Generator
 
   class Engine
-    
+
     class << self
 
       def parse(key)
-        # FETCH
+        # PARSE KEYWORD ARGS FIRST
       end
 
       def fetch(key)
-        # FETCH
+        # FETCH RANDOM ITEM FROM GIVEN ARRAY
       end
     end
   end
