@@ -1,0 +1,4 @@
+en:
+  generator:
+    course:
+      subject: ['CS', 'MAT', 'PHY', 'STA', 'BIO']
