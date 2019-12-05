@@ -13,7 +13,7 @@ module Generator
 
       def parse(key)
         # PARSE KEYWORD ARGS FIRST
-        # https://github.com/faker-ruby/faker/blob/035b3aaa7aa04b678c7df0589f67a7fe0a10cc6b/lib/faker.rb#L124
+        # Adapted from https://github.com/faker-ruby/faker/blob/035b3aaa7aa04b678c7df0589f67a7fe0a10cc6b/lib/faker.rb#L124
         fetched = fetch(key)
         parts = fetched.scan(/(\(?)#\{([A-Za-z]+\.)?([^\}]+)\}([^#]+)?/).map do |prefix, class, method, etc|
         # If the token had a class Prefix (e.g., Name.first_name)
@@ -37,8 +37,8 @@ module Generator
         # And tack on spaces, commas, etc. left over in the string
         text + etc.to_s
       end
-      # If the fetched key couldn't be parsed, then fallback to numerify
-     parts.join
+      
+      parts.join
     end
 
     def fetch(key)
