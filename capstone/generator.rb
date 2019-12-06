@@ -7,7 +7,7 @@ I18n.reload! if I18n.backend.initialized?
 
 module Generator
 
-  class Engine
+  class Base
 
     class << self
 
