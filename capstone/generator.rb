@@ -18,7 +18,7 @@ module Generator
         parts = fetched.scan(/(\(?)#\{([A-Za-z]+\.)?([^\}]+)\}([^#]+)?/).map do |prefix, class, method, etc|
         # If the token had a class Prefix (e.g., Name.first_name)
         # grab the constant, otherwise use self
-        cls = class ? Generator.const_get(class.chop) : self
+        cls = class ? Base.const_get(class.chop) : self
 
         # If an optional leading parentheses is not present, prefix.should == "", otherwise prefix.should == "("
         # In either case the information will be retained for reconstruction of the string.
