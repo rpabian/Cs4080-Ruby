@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-module Generator
-  class Course < Base
+module DBSeeder
+  class Course < Generator
     flexible :course
 
     class << self
@@ -10,7 +10,7 @@ module Generator
       end
 
       def course_number
-        Array.new(4) { |_| fetch(digits) }.join 
+        Array.new(4) { |_| fetch(digits) }.join
       end
 
       def digits
