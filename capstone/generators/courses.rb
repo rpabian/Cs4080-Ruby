@@ -2,8 +2,6 @@
 
 module DBSeeder
   class Course < Generator
-    flexible :course
-
     class << self
       def course_subject
         fetch('course.subject')
