@@ -1,4 +1,4 @@
 en:
   generator:
     course:
-      subject: ['CS', 'MAT', 'PHY', 'STA', 'BIO']
+      subject: ['CS','CS','CS','CS','CS', 'MAT', 'PHY', 'STA', 'BIO']
