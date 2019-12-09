@@ -5,12 +5,9 @@
 require_relative 'student'
 
 class Student
-  attr_reader :first_name, :last_name
-  attr_accessor :schedule
+  attr_accessor :username
 
-  def initialize(first_name, last_name)
-    @first_name = first_name
-    @last_name = last_name
-    @schedule = []
+  def initialize(username)
+    @username = username
   end
 end
