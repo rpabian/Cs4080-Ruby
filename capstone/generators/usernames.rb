@@ -8,7 +8,7 @@ module DBSeeder
       end
 
       def user_number
-        Array.new(3) { |_| fetch(digits) }.join
+        Array.new(3) { |_| sample(digits) }.join
       end
 
       def digits

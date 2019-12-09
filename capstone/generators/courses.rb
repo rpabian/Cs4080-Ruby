@@ -8,7 +8,12 @@ module DBSeeder
       end
 
       def course_number
-        Array.new(4) { |_| fetch(digits) }.join
+        (Array.new(1) { |_| sample(leading) } +
+            Array.new(3) { |_| sample(digits) }).join
+      end
+
+      def leading
+        %w[1 2 3]
       end
 
       def digits

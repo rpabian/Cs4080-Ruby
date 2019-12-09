@@ -14,8 +14,11 @@ def test_run
   day.courses.push(course)
 
   puts 'Hi, my name is Billy Bronco.'
-  puts 'Every ' + day + ', I have these courses:'
-  puts day.courses
+  print 'My username is ', DBSeeder::Username.user_name, DBSeeder::Username.user_number, "\n"
+  print 'Every ', day.day_of_week, ", I have these courses: \n"
+  day.courses.each do |course|
+    print course.subject, ' ', course.number
+  end
 end
 
 test_run

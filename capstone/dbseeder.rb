@@ -8,6 +8,11 @@ I18n.reload! if I18n.backend.initialized?
 module DBSeeder
   class Generator
     class << self
+      # Adapted from https://github.com/faker-ruby/faker/blob/035b3aaa7aa04b678c7df0589f67a7fe0a10cc6b/lib/faker.rb
+      def sample(list)
+        list.respond_to?(:sample) ? list.sample(random: Random::DEFAULT) : list
+      end
+
       def parse(key)
         # PARSE KEYWORD ARGS FIRST
         # Adapted from https://github.com/faker-ruby/faker/blob/035b3aaa7aa04b678c7df0589f67a7fe0a10cc6b/lib/faker.rb#L124
@@ -36,10 +41,9 @@ module DBSeeder
 
       def fetch(key)
         # FETCH RANDOM ITEM FROM GIVEN ARRAY
-        translation = I18n.translate("generator.#{key}")
-        translation.sample(random: Random::DEFAULT)
+        sample(I18n.translate("generator.#{key}"))
       end
-     end
+    end
   end
 end
 
