@@ -1,0 +1,4 @@
+en:
+  generator:
+    grade:
+      letter: ['A','B','C','D','F']
